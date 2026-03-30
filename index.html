@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Communication Platform</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#003366',
+                        secondary: '#4B9CD3',
+                        accent: '#FFD700',
+                        light: '#F0F8FF',
+                        dark: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .nav-link {
+                @apply block py-2 px-4 text-white hover:bg-blue-700 transition-colors duration-200;
+            }
+            .nav-link-active {
+                @apply bg-blue-800 font-medium;
+            }
+            .sidebar-link {
+                @apply block py-2 px-4 text-gray-700 hover:bg-blue-50 transition-colors duration-200;
+            }
+            .sidebar-link-active {
+                @apply bg-blue-100 font-medium text-blue-800;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Top Navigation Bar -->
+    <header class="bg-primary text-white">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold">Science Communication Platform</span>
+            </div>
+            <div class="flex items-center">
+                <a href="#" class="hover:text-accent"><i class="fa fa-question-circle mr-1"></i> Help</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-6 flex flex-col md:flex-row">
+        <!-- Left Sidebar -->
+        <aside class="w-full md:w-56 mb-6 md:mb-0 md:mr-4">
+            <div class="bg-white rounded shadow-sm p-4">
+                <div class="mb-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search Skills" class="w-full py-2 px-3 pr-8 rounded border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <nav>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="index.html" class="flex items-center justify-between p-2 bg-blue-100 text-blue-800 rounded font-medium border border-black">
+                                <span class="flex items-center">
+                                    <i class="fa fa-angle-right mr-2"></i>
+                                    Home
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="why-communicate.html" class="flex items-center justify-between p-2 hover:bg-gray-100 rounded border border-black">
+                                <span class="flex items-center">
+                                    <i class="fa fa-angle-right mr-2"></i>
+                                    Why<br>to communicate?
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="what-communicate.html" class="flex items-center justify-between p-2 hover:bg-gray-100 rounded border border-black">
+                                <span class="flex items-center">
+                                    <i class="fa fa-angle-right mr-2"></i>
+                                    What to communicate?
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="how-communicate.html" class="flex items-center justify-between p-2 hover:bg-gray-100 rounded border border-black">
+                                <span class="flex items-center">
+                                    <i class="fa fa-angle-right mr-2"></i>
+                                    How to communicate?
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="where-when-communicate.html" class="flex items-center justify-between p-2 hover:bg-gray-100 rounded border border-black">
+                                <span class="flex items-center">
+                                    <i class="fa fa-angle-right mr-2"></i>
+                                    Where & When to communicate?
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="practice-skills.html" class="flex items-center justify-between p-2 hover:bg-gray-100 rounded border border-black">
+                                <span class="flex items-center">
+                                    <i class="fa fa-angle-right mr-2"></i>
+                                    Practice your skills!
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="flex items-center justify-between p-2 hover:bg-gray-100 rounded border border-black">
+                                <span class="flex items-center">
+                                    <i class="fa fa-angle-right mr-2"></i>
+                                    Contact information
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <div class="bg-white rounded shadow-sm overflow-hidden">
+                <!-- Banner Image -->
+                <div class="w-full max-w-2xl mx-auto my-4">
+                    <img src="https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/1ed81a96cf064ec2a6c0f904fd905f1d.png~tplv-a9rns2rl98-24:720:720.png?lk3s=8e244e95&rcl=2026033009572079CAD215E868D2D1C08A&rrcfp=8a172a1a&x-expires=1775440640&x-signature=1Hkbeqa7qT%2FxCID6yhTr9kTmqRc%3D" 
+                         alt="Science Communication Platform" 
+                         class="w-full h-auto object-cover rounded-lg">
+                </div>
+                
+                <!-- Content Area -->
+                <div class="p-6">
+                    <h1 class="text-2xl font-bold mb-4 text-gray-800">Welcome to the Science Communication Platform!</h1>
+                    <p class="text-gray-700 mb-4">
+                        This is the Science Communication Platform of the Faculty of Science. We cater to individuals from various scientific academic backgrounds, from students to researchers.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        As part of our platform, we are organizing a series of events around various aspects of science communication, which should be seen as supporting your courses or research.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script>
+        // Simple Interactive Functions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search Functionality
+            const searchForms = document.querySelectorAll('input[placeholder="Search..."], input[placeholder="Search content..."]');
+            searchForms.forEach(input => {
+                input.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        alert('Search function: You searched for: ' + this.value);
+                        this.value = '';
+                    }
+                });
+            });
+            
+            // Navigation Link Click Effect
+            const navLinks = document.querySelectorAll('.nav-link, .sidebar-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        
+                        // Remove active state from sibling links
+                        const siblings = Array.from(this.parentElement.parentElement.children);
+                        siblings.forEach(sibling => {
+                            const siblingLink = sibling.querySelector('a');
+                            if (siblingLink) {
+                                siblingLink.classList.remove('nav-link-active', 'sidebar-link-active');
+                            }
+                        });
+                        
+                        // Add active state to current link
+                        this.classList.add(this.classList.contains('nav-link') ? 'nav-link-active' : 'sidebar-link-active');
+                        
+                        // Show click feedback
+                        const linkText = this.textContent.trim();
+                        if (linkText !== 'Home') {
+                            alert('Navigation function: You clicked on "' + linkText + '", which would take you to the corresponding page.');
+                        }
+                    }
+                });
+            });
+            
+            // Feature Card Interaction
+            const featureCards = document.querySelectorAll('.bg-blue-50, .bg-green-50, .bg-yellow-50');
+            featureCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const title = this.querySelector('h3').textContent;
+                    alert('Feature card: You clicked on the "' + title + '" card.');
+                });
+            });
+            
+            // Mobile Menu Toggle
+            const menuButton = document.querySelector('button.md\\:hidden');
+            const mainNav = document.querySelector('nav.container.mx-auto.px-4.py-3 .hidden.md\\:flex');
+            
+            if (menuButton && mainNav) {
+                menuButton.addEventListener('click', function() {
+                    if (mainNav.classList.contains('hidden')) {
+                        mainNav.classList.remove('hidden');
+                        mainNav.classList.add('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'right-0', 'bg-primary', 'z-10');
+                    } else {
+                        mainNav.classList.add('hidden');
+                        mainNav.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'right-0', 'bg-primary', 'z-10');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
