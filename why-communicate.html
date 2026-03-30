@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why to communicate? - Science Communication Platform</title>
+    <title>Why to communicate? - ICSscience</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
@@ -42,6 +42,18 @@
             .sidebar-link-active {
                 @apply bg-blue-100 font-medium text-blue-800;
             }
+            .subtab-link {
+                @apply px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-200 cursor-pointer;
+            }
+            .subtab-link-active {
+                @apply bg-blue-100 text-blue-800 font-medium;
+            }
+            .subtab-content {
+                @apply hidden;
+            }
+            .subtab-content-active {
+                @apply block;
+            }
         }
     </style>
 </head>
@@ -50,7 +62,7 @@
     <header class="bg-primary text-white">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <a href="index.html" class="text-2xl font-bold">Science Communication Platform</a>
+                <a href="index.html" class="text-2xl font-bold">ICSscience</a>
             </div>
             <div class="flex items-center">
                 <a href="#" class="hover:text-accent"><i class="fa fa-question-circle mr-1"></i> Help</a>
@@ -76,19 +88,41 @@
                     <ul class="space-y-1">
                         <li>
                             <a href="index.html" class="flex items-center justify-between p-2 hover:bg-gray-100 rounded border border-black">
-                                <span class="flex items-center">
-                                    <i class="fa fa-angle-right mr-2"></i>
+                                <span>
                                     Home
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="why-communicate.html" class="flex items-center justify-between p-2 bg-blue-100 text-blue-800 rounded font-medium border border-black">
+                            <a href="why-communicate.html" class="flex items-center justify-between p-2 bg-blue-100 text-blue-800 rounded font-medium border border-black pl-4 border-l-4 border-l-primary">
                                 <span class="flex items-center">
-                                    <i class="fa fa-angle-right mr-2"></i>
+                                    <i class="fa fa-angle-down mr-2"></i>
                                     Why<br>to communicate?
                                 </span>
                             </a>
+                            <!-- Sub-tabs Navigation -->
+                            <ul class="ml-6 mt-1 space-y-1">
+                                <li>
+                                    <button class="w-full text-left p-2 bg-blue-50 text-blue-800 rounded border border-gray-300 subtab-link subtab-link-active" data-tab="overlooked">
+                                        Communication- An Overlooked Science
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="w-full text-left p-2 hover:bg-blue-50 rounded border border-gray-300 subtab-link" data-tab="gap">
+                                        Bridging the Gap
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="w-full text-left p-2 hover:bg-blue-50 rounded border border-gray-300 subtab-link" data-tab="funding">
+                                        Funding your Dreams
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="w-full text-left p-2 hover:bg-blue-50 rounded border border-gray-300 subtab-link" data-tab="fakenews">
+                                        Fake News Fake News Fake News
+                                    </button>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="what-communicate.html" class="flex items-center justify-between p-2 hover:bg-gray-100 rounded border border-black">
@@ -124,8 +158,7 @@
                         </li>
                         <li>
                             <a href="contact.html" class="flex items-center justify-between p-2 hover:bg-gray-100 rounded border border-black">
-                                <span class="flex items-center">
-                                    <i class="fa fa-angle-right mr-2"></i>
+                                <span>
                                     Contact information
                                 </span>
                             </a>
@@ -141,18 +174,46 @@
                 <!-- Content Area -->
                 <div class="p-6">
                     <h1 class="text-2xl font-bold mb-4 text-gray-800">Why to communicate?</h1>
-                    <p class="text-gray-700 mb-4">
-                        Contact your IC's Institute communication specialist for any questions, if you need help with communicating or if you have a great idea.
-                    </p>
-                    <p class="text-gray-700 mb-4">
-                        Email is: <a href="mailto:institutename_IC.science@universiteitleiden.nl" class="text-blue-600 hover:underline">institutename_IC.science@universiteitleiden.nl</a>
-                    </p>
-                    <p class="text-gray-700 mb-4">
-                        Find your IC's here: <a href="https://IC.Science.universiteitleiden.nl/" target="_blank" class="text-blue-600 hover:underline">https://IC.Science.universiteitleiden.nl/</a>
-                    </p>
-                    <p class="text-gray-700 mb-4">
-                        Book training via the Leiden Career zone: <a href="https://careerszone.universiteitleiden.nl/" target="_blank" class="text-blue-600 hover:underline">https://careerszone.universiteitleiden.nl/</a>
-                    </p>
+                    
+
+                    
+                    <!-- Sub-tabs Content -->
+                    <div class="subtab-content subtab-content-active" id="overlooked-content">
+                        <h2 class="text-xl font-semibold mb-3 text-gray-800">Communication- An Overlooked Science</h2>
+                        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+                            <li>Oftentimes scientists can feel like it's not worth it because the general public will never understand- that's not true!</li>
+                            <li>These reasons are why we created this page. Trust us, it will be easy and simple to learn how to communicate with other scientists, the general public, and anyone after this page</li>
+                            <li>Feel free to browse it based on what specific struggles you're having in communication</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="subtab-content" id="gap-content">
+                        <h2 class="text-xl font-semibold mb-3 text-gray-800">Bridging the Gap</h2>
+                        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+                            <li>It's important for 'regular' people who aren't scientists and to understand the ideas that scientists have</li>
+                            <li>If we don't have any way to communicate with the general public, there will be a disconnection between scientists & the rest of the world</li>
+                            <li>Bridging the 'knowledge gap' allows</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="subtab-content" id="funding-content">
+                        <h2 class="text-xl font-semibold mb-3 text-gray-800">Funding your Dreams</h2>
+                        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+                            <li>If you can't communicate, you likely won't be able to convince others on why your scientific work matters</li>
+                            <li>Politicians specifically may not be convinced if you lack the ability to communicate why your idea is worth funding.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="subtab-content" id="fakenews-content">
+                        <h2 class="text-xl font-semibold mb-3 text-gray-800">Fake News Fake News Fake News</h2>
+                        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+                            <li>As educated scientists, we hold a responsibility to provide factual information to the general public.</li>
+                            <li>If the general public aren't educated/communicated with by scientists, politicians will have the power to spread misinformation</li>
+                            <li>Communication connects people & empowers all groups to create a more factual, understanding environment</li>
+                        </ul>
+                    </div>
+                    
+
                 </div>
             </div>
         </div>
@@ -162,7 +223,7 @@
         // Simple Interactive Functions
         document.addEventListener('DOMContentLoaded', function() {
             // Search Functionality
-            const searchForms = document.querySelectorAll('input[placeholder="Search..."], input[placeholder="Search content..."], input[placeholder="Search titles, descriptions"]');
+            const searchForms = document.querySelectorAll('input[placeholder="Search..."], input[placeholder="Search content..."], input[placeholder="Search titles, descriptions"], input[placeholder="Search Skills"]');
             searchForms.forEach(input => {
                 input.addEventListener('keypress', function(e) {
                     if (e.key === 'Enter') {
@@ -196,6 +257,24 @@
                     if (linkText !== 'Home') {
                         alert('Navigation function: You clicked on "' + linkText + '", which would take you to the corresponding page.');
                     }
+                });
+            });
+            
+            // Sub-tabs Functionality
+            const subtabLinks = document.querySelectorAll('.subtab-link');
+            const subtabContents = document.querySelectorAll('.subtab-content');
+            
+            subtabLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active state from all tabs
+                    subtabLinks.forEach(l => l.classList.remove('subtab-link-active'));
+                    subtabContents.forEach(c => c.classList.remove('subtab-content-active'));
+                    
+                    // Add active state to clicked tab and corresponding content
+                    this.classList.add('subtab-link-active');
+                    document.getElementById(targetTab + '-content').classList.add('subtab-content-active');
                 });
             });
         });
