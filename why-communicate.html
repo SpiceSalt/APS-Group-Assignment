@@ -215,65 +215,29 @@
         </div>
     </main>
 
-    <script>
-        // Simple Interactive Functions
-        document.addEventListener('DOMContentLoaded', function() {
-            // Search Functionality
-            const searchForms = document.querySelectorAll('input[placeholder="Search..."], input[placeholder="Search content..."], input[placeholder="Search titles, descriptions"], input[placeholder="Search Skills"]');
-            searchForms.forEach(input => {
-                input.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter') {
-                        e.preventDefault();
-                        alert('Search function: You searched for: ' + this.value);
-                        this.value = '';
-                    }
-                });
-            });
-            
-            // Navigation Link Click Effect
-            const navLinks = document.querySelectorAll('a[href="#"]');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Remove active state from sibling links
-                    const siblings = Array.from(this.parentElement.parentElement.children);
-                    siblings.forEach(sibling => {
-                        const siblingLink = sibling.querySelector('a');
-                        if (siblingLink) {
-                            siblingLink.classList.remove('bg-blue-100', 'text-blue-800', 'font-medium');
-                        }
-                    });
-                    
-                    // Add active state to current link
-                    this.classList.add('bg-blue-100', 'text-blue-800', 'font-medium');
-                    
-                    // Show click feedback
-                    const linkText = this.textContent.trim();
-                    if (linkText !== 'Home') {
-                        alert('Navigation function: You clicked on "' + linkText + '", which would take you to the corresponding page.');
-                    }
-                });
-            });
-            
-            // Sub-tabs Functionality
-            const subtabLinks = document.querySelectorAll('.subtab-link');
-            const subtabContents = document.querySelectorAll('.subtab-content');
-            
-            subtabLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    const targetTab = this.getAttribute('data-tab');
-                    
-                    // Remove active state from all tabs
-                    subtabLinks.forEach(l => l.classList.remove('subtab-link-active'));
-                    subtabContents.forEach(c => c.classList.remove('subtab-content-active'));
-                    
-                    // Add active state to clicked tab and corresponding content
-                    this.classList.add('subtab-link-active');
-                    document.getElementById(targetTab + '-content').classList.add('subtab-content-active');
-                });
-            });
-        });
-    </script>
+    <div id="search-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[80vh] overflow-hidden">
+            <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+                <div class="relative w-full">
+                    <input type="text" id="modal-search-input" placeholder="Search Skills" class="w-full py-2 px-3 pr-8 rounded border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button id="modal-search-button" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                <button id="close-search-modal" class="ml-4 text-gray-500 hover:text-gray-700">
+                    <i class="fa fa-times text-xl"></i>
+                </button>
+            </div>
+            <div id="search-results-container" class="p-4 overflow-y-auto max-h-[60vh]">
+                <!-- Search results will be inserted here -->
+            </div>
+            <div id="search-status" class="p-4 text-center text-gray-500 hidden">
+                <!-- Status messages will be shown here -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="interactive-function.js"></script>
 </body>
 </html>
