@@ -42,6 +42,18 @@
             .sidebar-link-active {
                 @apply bg-blue-100 font-medium text-blue-800;
             }
+            .subtab-link {
+                @apply px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-200 cursor-pointer;
+            }
+            .subtab-link-active {
+                @apply bg-blue-100 text-blue-800 font-medium;
+            }
+            .subtab-content {
+                @apply hidden;
+            }
+            .subtab-content-active {
+                @apply block;
+            }
         }
     </style>
 </head>
@@ -100,10 +112,38 @@
                         <li>
                             <a href="how-communicate.html" class="flex items-center justify-between p-2 bg-blue-100 text-blue-800 rounded font-medium border border-black pl-4 border-l-4 border-l-primary">
                                 <span class="flex items-center">
-                                    <i class="fa fa-angle-right mr-2"></i>
+                                    <i class="fa fa-angle-down mr-2"></i>
                                     How to communicate?
                                 </span>
                             </a>
+                            <!-- Sub-tabs Navigation -->
+                            <ul class="ml-6 mt-1 space-y-1">
+                                <li>
+                                    <button class="w-full text-left p-2 bg-blue-50 text-blue-800 rounded border border-gray-300 subtab-link subtab-link-active text-sm" data-tab="principles">
+                                        Key Principles
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="w-full text-left p-2 hover:bg-blue-50 rounded border border-gray-300 subtab-link text-sm" data-tab="tips">
+                                        Practical Tips
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="w-full text-left p-2 hover:bg-blue-50 rounded border border-gray-300 subtab-link text-sm" data-tab="practice">
+                                        Practice & Skill Development
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="w-full text-left p-2 hover:bg-blue-50 rounded border border-gray-300 subtab-link text-sm" data-tab="institutional">
+                                        Institutional & Structural Suggestions
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="w-full text-left p-2 hover:bg-blue-50 rounded border border-gray-300 subtab-link text-sm" data-tab="apply">
+                                        Applying this to your own research
+                                    </button>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="where-when-communicate.html" class="flex items-center justify-between p-2 hover:bg-gray-100 rounded border border-black">
@@ -139,9 +179,110 @@
                 <!-- Content Area -->
                 <div class="p-6">
                     <h1 class="text-2xl font-bold mb-4 text-gray-800">How to communicate?</h1>
-                    <p class="text-gray-700">
-                        Content coming soon...
-                    </p>
+                    <!-- Sub-tabs Content -->
+                    <div class="subtab-content subtab-content-active" id="principles-content">
+                        <h2 class="text-xl font-semibold mb-3 text-gray-800">What makes communication effective?</h2>
+                        <ol class="list-decimal pl-6 mb-4 text-gray-700 space-y-4">
+                            <li>
+                                <strong>Know your audience</strong> → Adapt your level of detail, terminology, and examples depending on who you are speaking to (peers vs non-experts).
+                            </li>
+                            <li>
+                                <strong>Clarity over complexity</strong> → Simplicity ≠ loss of rigor. A clear explanation demonstrates deeper understanding.
+                            </li>
+                            <li>
+                                <strong>Structure your message</strong> → Every explanation should answer:
+                                <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <li>What is the problem?</li>
+                                    <li>Why does it matter?</li>
+                                    <li>What did you do?</li>
+                                    <li>What does it change?</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Use storytelling</strong> → Frame your research as a narrative:
+                                <p class="mt-2">Problem ⇒ Approach ⇒ Result ⇒ Impact</p>
+                            </li>
+                            <li>
+                                <strong>Avoid jargon (when possible)</strong> → If technical terms are necessary, define them briefly and intuitively.
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <div class="subtab-content" id="tips-content">
+                        <h2 class="text-xl font-semibold mb-3 text-gray-800">How to improve immediately</h2>
+                        <ol class="list-decimal pl-6 mb-4 text-gray-700 space-y-4">
+                            <li>
+                                <strong>The 1-minute test</strong> → Explain your research in under 1 minute. If you can't, simplify further.
+                            </li>
+                            <li>
+                                <strong>The "outside your field" test</strong> → Explain your work to someone in a different discipline. If they understand the core idea, you are on the right track.
+                            </li>
+                            <li>
+                                <strong>Use analogies and visuals</strong> → Translate abstract/theoretical concepts into more relatable ideas.
+                            </li>
+                            <li>
+                                <strong>Be intentional with slides</strong>: One idea per slide; minimal text; visual support > written explanation
+                            </li>
+                            <li>
+                                <strong>Pause and engage</strong> → Allow time for questions and interaction
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <div class="subtab-content" id="practice-content">
+                        <h2 class="text-xl font-semibold mb-3 text-gray-800">Practice & Skill Development</h2>
+                        <p class="mb-4 text-gray-700">Communication improves through deliberate practice:</p>
+                        <ol class="list-decimal pl-6 mb-4 text-gray-700 space-y-4">
+                            <li>
+                                <strong>Peer practice sessions</strong> → Present to fellow students, PhDs, or postdocs; ask for targeted feedback (clarity, pacing, structure)
+                            </li>
+                            <li>
+                                <strong>Join or create informal speaking spaces</strong> → Low-pressure environments are ideal for experimenting and improving
+                            </li>
+                            <li>
+                                <strong>Record yourself</strong> → Identify unclear explanations, filler words, and pacing issues
+                            </li>
+                            <li>
+                                <strong>Manage performance anxiety</strong> → Prepare your opening; practice in low-stakes settings; use breathing techniques to regulate nerves
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <div class="subtab-content" id="institutional-content">
+                        <h2 class="text-xl font-semibold mb-3 text-gray-800">Institutional & Structural Suggestions</h2>
+                        <p class="mb-4 text-gray-700">To support long-term improvement, communication should be fully integrated into academic culture:</p>
+                        <ol class="list-decimal pl-6 mb-4 text-gray-700 space-y-4">
+                            <li>
+                                <strong>Science Communication Workshops</strong> → sessions led by trained communicators or experienced researchers; focus on public speaking, storytelling, and audience adaptation
+                            </li>
+                            <li>
+                                <strong>Integration into curricula</strong> → Include communication components in courses and research projects
+                            </li>
+                            <li>
+                                <strong>Dedicated communication support</strong> → Establish or promote a Faculty Science Communicator role
+                            </li>
+                            <li>
+                                <strong>Practice platforms</strong> → Create recurring, student-led events where researchers can present informally (e.g. Café Lorentz)
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <div class="subtab-content" id="apply-content">
+                        <h2 class="text-xl font-semibold mb-3 text-gray-800">Applying this to your own research</h2>
+                        <p class="mb-4 text-gray-700">To directly apply these principles write a 2-paragraph summary of your research.</p>
+                        <p class="mb-4 text-gray-700">Translate it into:</p>
+                        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+                            <li>A 1-minute explanation</li>
+                            <li>A 3-minute structured talk</li>
+                        </ul>
+                        <p class="mb-4 text-gray-700">Identify:</p>
+                        <ul class="list-disc pl-6 mb-4 text-gray-700 space-y-2">
+                            <li>Your audience</li>
+                            <li>Your key message</li>
+                            <li>Your desired impact</li>
+                        </ul>
+                        <p class="mb-4 text-gray-700">Then test and refine through practice.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -185,6 +326,24 @@
                     if (linkText !== 'Home') {
                         alert('Navigation function: You clicked on "' + linkText + '", which would take you to the corresponding page.');
                     }
+                });
+            });
+            
+            // Sub-tabs Functionality
+            const subtabLinks = document.querySelectorAll('.subtab-link');
+            const subtabContents = document.querySelectorAll('.subtab-content');
+            
+            subtabLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active state from all tabs
+                    subtabLinks.forEach(l => l.classList.remove('subtab-link-active'));
+                    subtabContents.forEach(c => c.classList.remove('subtab-content-active'));
+                    
+                    // Add active state to clicked tab and corresponding content
+                    this.classList.add('subtab-link-active');
+                    document.getElementById(targetTab + '-content').classList.add('subtab-content-active');
                 });
             });
         });
