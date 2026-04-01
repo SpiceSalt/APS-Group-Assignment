@@ -482,3 +482,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Sub-tabs Functionality
+            const subtabLinks = document.querySelectorAll('.subtab-link');
+            const subtabContents = document.querySelectorAll('.subtab-content');
+            
+            subtabLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active state from all tabs
+                    subtabLinks.forEach(l => l.classList.remove('subtab-link-active'));
+                    subtabContents.forEach(c => c.classList.remove('subtab-content-active'));
+                    
+                    // Add active state to clicked tab and corresponding content
+                    this.classList.add('subtab-link-active');
+                    document.getElementById(targetTab + '-content').classList.add('subtab-content-active');
+                });
+            });
